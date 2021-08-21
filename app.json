@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/my/index",
+    "pages/mission/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#3A61C6",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/nav/home.png",
+        "selectedIconPath": "images/nav/home_fill.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/mission/index",
+        "iconPath": "images/nav/goods.png",
+        "selectedIconPath": "images/nav/goods_fill.png",
+        "text": "跳蚤市场"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "images/nav/my.png",
+        "selectedIconPath": "images/nav/my_fill.png",
+        "text": "我的小店"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-popup": "@vant/weapp/popup/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

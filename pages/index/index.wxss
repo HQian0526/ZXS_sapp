@@ -1,0 +1,86 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+
+
+
+
+.elechart{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titlefont{
+  font-size: 26rpx;
+  color: #aaaaaa;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+.bodygrid{
+  width: 320rpx;height: 180rpx;
+  border-radius: 15rpx;
+  box-shadow: 0px 0px 5px #dad7d7;
+}
+
+.icon-contract,.icon-time,.icon-calendar,.icon-max,.icon-min,.icon-avg{
+  color:#3A61c6;
+  font-size: 45rpx;
+  margin-left: 6rpx;
+}
+
+.bodytext{
+  margin-top: -6rpx;
+  font-size: 22rpx;
+  margin-left: 15rpx;
+  color:#aaaaaa;
+}
+
+.secondgrid{
+  margin-top: -10rpx;
+}
+
+.danwei{
+  font-size: 26rpx;
+  color: #aaaaaa;
+  margin-top: 20rpx;
+  position: relative;
+  left: 56%;
+}
+
+.linechart{
+  display: flex;
+  flex-direction: row;
+}
+
+.headline{
+  margin:0 auto;
+  width: 90%;
+  height: 1rpx;
+  background-color: #c7c6c6;
+}
+
+.gridfont{
+  font-size: 24rpx;
+  color:#aaaaaa
+}

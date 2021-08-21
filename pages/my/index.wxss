@@ -1,0 +1,27 @@
+/* pages/my/index.wxss */
+page{
+  background-color: #d2fcf1;
+}
+
+.tologininfo{
+  font-size: 30rpx;
+  margin-left: 10%;
+  
+}
+
+.tologin{
+  float: left;
+  font-weight: 600;
+  margin-top: 30rpx;
+}
+
+.clicktologin{
+  font-size: 26rpx;
+}
+
+.loginbutton{
+  float: right;
+  margin-right: 30rpx;
+  margin-bottom: 10rpx;
+  margin-top: 25rpx;
+}

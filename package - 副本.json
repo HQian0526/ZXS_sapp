@@ -1,0 +1,26 @@
+{
+  "name": "hqfuture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "vant-weapp": "^0.5.29"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HQian0526/ZXS_sapp.git"
+  },
+  "keywords": [
+    "xcx963497073"
+  ],
+  "author": "黄乾",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HQian0526/ZXS_sapp/issues"
+  },
+  "homepage": "https://github.com/HQian0526/ZXS_sapp#readme"
+}
