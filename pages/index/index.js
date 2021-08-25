@@ -1,52 +1,76 @@
-// index.js
-// 获取应用实例
-const app = getApp()
-
+const app = getApp();
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    canIUseGetUserProfile: true,
-    canIUseOpenData: false
-    //wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+    user:{},    //用户信息，存入缓存
+    loginCode:'',  //登录随机号
+    loginStatus:false,
+    a:1
   },
-  // 事件处理函数
-  bindViewTap() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+  
   onLoad() {
-    if (wx.getUserProfile) {
-      this.setData({
-        canIUseGetUserProfile: true
-      })
+    if(!app.globalData.loginCode || app.globalData.loginCode==""){
+      app.loginCodeCallBack=loginCode=>{
+        if(loginCode!=""){
+          const user = wx.getStorageSync("user");
+          if(!user || user==""){  //无缓存，未登录
+            this.setData({ loginStatus:false})
+          }else{
+            this.setData({
+              loginStatus:'true',
+            })
+          }
+        }
+      }
+    }else{
+      const user = wx.getStorageSync("user");
+          if(!user || user==""){  //无缓存，未登录
+            this.setData({ loginStatus:false})
+          }else{
+            this.setData({
+              loginStatus:'true',
+            })
+          }
     }
   },
+
+  onShow(){
+    const user = wx.getStorageSync("user");
+          if(!user || user==""){  //无缓存，未登录
+            this.setData({ loginStatus:false})
+          }else{
+            this.setData({
+              loginStatus:'true',
+            })
+          }
+  },
+
+  /**
+   * 获取用户登录信息
+   */
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+    let that = this;
     wx.getUserProfile({
       desc: '获取你的昵称、头像、地区及性别', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
-        console.log(res)
         this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
+          user:{
+            nickName:res.userInfo.nickName,
+            gender:res.userInfo.gender,
+            province:res.userInfo.province,
+            city:res.userInfo.city,
+            avatarUrl:res.userInfo.avatarUrl,
+            loginCode:this.data.loginCode,
+          },
+          loginStatus:true
         })
+        wx.setStorageSync("user",this.data.user);
       },
       fail: (res) => {
         console.log("用户未授权")
       }
     })
   },
-  getUserInfo(e) {
-    // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
-    console.log(e)
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
+
 })

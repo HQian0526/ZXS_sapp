@@ -1,31 +1,20 @@
-<view class="bottompopup">
-<van-popup show="{{ show }}" position="bottom" custom-style="height: 10%;" bind:close="onClose">
-  <view class="tologininfo">
-    <view class="tologin">登录后查看我的小店信息</view>
-    <view class="loginbutton">
-      <van-button round type="primary" bind:click="getUserProfile" custom-style="width:200rpx; height:50rpx">
-        <text class="clicktologin">一键登录</text>
-      </van-button>
-    </view>
-  </view>
-</van-popup>
-</view>
-
-
 <view class="cu-card case {{isCard?'no-card':''}}">
   <view class="cu-item shadow">
     <view class="cu-list menu-avatar">
       <view class="cu-item">
-        <view class="cu-avatar round lg" style="background-image:url( {{avatarUrl}} );"></view>
+        <view class="cu-avatar round lg" style="background-image:url( {{user.avatarUrl}} );"></view>
         <view class="content flex-sub">
-          <view class="text-grey">{{nickName}}</view>
+          <view class="text-grey">{{user.nickName}}</view>
           <view class="text-gray text-sm flex justify-between">
            小店信誉分：{{ shopPoint}}分
-            <view class="text-gray text-sm">
-              <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
-              <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-              <text class="cuIcon-messagefill margin-lr-xs"></text> 30
-            </view>
+          </view>
+        </view>
+        <view class="info_button lg">
+          <view class="tologin" wx:if="{{loginStatus==false}}">
+            <van-button round type="primary" bind:click="getUserProfile" custom-style="width:250rpx;height:60rpx">一键快速登录</van-button>
+          </view>
+          <view class="toshore" wx:if="{{loginStatus==true}}">
+            <van-button round type="primary" bind:click="toShore" custom-style="width:250rpx;height:60rpx">进入我的小店</van-button>
           </view>
         </view>
       </view>

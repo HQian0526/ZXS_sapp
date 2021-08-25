@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "@vant/weapp": "^1.6.9",
+    "vant": "^2.12.26",
     "vant-weapp": "^0.5.29"
   },
   "devDependencies": {},

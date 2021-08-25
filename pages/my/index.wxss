@@ -10,9 +10,7 @@ page{
 }
 
 .tologin{
-  float: left;
-  font-weight: 600;
-  margin-top: 30rpx;
+  margin-left: 10rpx;
 }
 
 .clicktologin{
@@ -25,3 +23,21 @@ page{
   margin-bottom: 10rpx;
   margin-top: 25rpx;
 }
+
+.info_button{
+  width: 200rpx; height: 60rpx;
+  border:1rpx solid;
+  border-radius: 20rpx;
+  border-color: #4bc560;
+  background-color: #4bc560;
+  color: #fff;
+  letter-spacing: 3rpx;
+  font-size: 26rpx;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
