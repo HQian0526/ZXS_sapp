@@ -1,3 +1,55 @@
+<!-- 顶部轮播图 -->
+<swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="3000" duration="100" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+  <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+    <view class="swiper-item">
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+      <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+    </view>
+  </swiper-item>
+</swiper>
+
+
+<view class="VerticalBox">
+  <!-- 左侧导航栏 -->
+  <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - 280rpx)">
+    <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{list}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </scroll-view>
+
+  <!-- 右侧商品栏 -->
+  <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 280rpx)" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+    <view class="padding-top padding-lr" wx:for="{{list}}" wx:key id="main-{{index}}">
+      <view class='cu-bar solid-bottom bg-white'>
+        <view class='action'>
+          <text class='cuIcon-title text-green'></text> {{item.name}} </view>
+      </view>
+      <view class="cu-list menu-avatar">
+        
+        <view class="cu-item " wx:for="{{5}}" wx:key="key">
+          <view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
+          <view class="content">
+            <view class="text-pink">
+              <text class="text-cut">莫甘娜</text>
+            </view>
+            <view class="text-gray text-sm flex">
+              <text class="text-cut">凯尔，你被自己的光芒变的盲目！</text>
+            </view>
+          </view>
+          <view class="action">
+            <view class="text-grey text-xs">22:20</view>
+            <view class="cu-tag round bg-red sm">5</view>
+          </view>
+        </view>
+           
+            
+      </view>
+
+    </view>
+  </scroll-view>
+</view>
+
+
 <view class="login" wx:if="{{loginStatus==false}}">
   <van-button round type="primary" bind:click="getUserProfile">一键登录</van-button>
 </view>
