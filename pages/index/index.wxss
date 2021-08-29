@@ -1,11 +1,11 @@
 .login{
   width: 100%;
   letter-spacing: 3rpx;
-  position: absolute;
-  bottom: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  bottom: 2%;
 }
 
 .VerticalNav.nav {
@@ -43,4 +43,10 @@
 }
 .VerticalMain{
   background-color: #f1f1f1;
+}
+
+.tower-swiper .tower-item {
+  transform: scale(calc(0.5 + var(--index) / 10));
+  margin-left: calc(var(--left) * 100rpx - 150rpx);
+  z-index: var(--index);
 }
