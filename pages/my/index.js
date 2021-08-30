@@ -1,4 +1,4 @@
-
+const app = getApp();
 Page({
 
   /**
@@ -11,8 +11,63 @@ Page({
     user:{
       nickName:'账号未登录',     //昵称
       avatarUrl:'',   //头像
-    }     
+    }   ,
+    
+    
+    StatusBar: app.globalData.StatusBar,
+    CustomBar: app.globalData.CustomBar,
+    iconList: [{
+      icon: 'shop',
+      color: 'orange',
+      badge: 18,
+      name: '全部'
+    }, {
+      icon: 'repair',
+      color: 'orange',
+      badge: 1,
+      name: '待处理'
+    }, {
+      icon: 'medal',
+      color: 'orange',
+      badge: 0,
+      name: '已处理'
+    },{
+      icon: 'favorfill',
+      color: 'orange',
+      badge: 0,
+      name: '我的收藏'
+    }],
+  functionList:[{
+      icon: 'text',
+      color: 'orange',
+      badge: 0,
+      name: '完善资料'
+    },{
+      icon: 'friendadd',
+      color: 'orange',
+      badge: 0,
+      name: '邀请好友'
+    },{
+      icon: 'vip',
+      color: 'orange',
+      badge: 0,
+      name: '等级特权'
+    },{
+      icon: 'info',
+      color: 'orange',
+      badge: 0,
+      name: '常见问题'
+    },{
+      icon: 'service',
+      color: 'orange',
+      badge: 0,
+      name: '联系客服'
+    },],
+    gridCol:4,
+    skin: false,
+
   },
+
 
     /**
    * 生命周期函数--监听页面加载

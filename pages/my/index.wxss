@@ -1,12 +1,19 @@
 /* pages/my/index.wxss */
 page{
+  width: 96%;
   background-color: #d2fcf1;
+  margin: 0 auto;
 }
 
-.tologininfo{
-  font-size: 30rpx;
-  margin-left: 10%;
-  
+.cu-card{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -10rpx;
+}
+
+.shadow{
+  width: 100%;
 }
 
 .tologin{
@@ -40,4 +47,44 @@ page{
   justify-content: center;
   flex-direction: column;
 }
+
+.cu-bar{
+  margin-top: -10rpx;
+}
+
+.page {
+  height: 100Vh;
+  width: 100vw;
+}
+
+.page.show {
+  overflow: hidden;
+}
+
+.switch-sex::after {
+  content: "\e716";
+}
+
+.switch-sex::before {
+  content: "\e7a9";
+}
+
+.switch-music::after {
+  content: "\e66a";
+}
+
+.switch-music::before {
+  content: "\e6db";
+}
+
+.bottom{
+  width: 100%; height: 80rpx;
+  background-color:white;
+  font-size: 28rpx;
+  color: #aaaaaa;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 
