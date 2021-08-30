@@ -1,0 +1,8 @@
+page{
+  padding-bottom: 100rpx;
+}
+
+
+.box view.cu-bar {
+  margin-top: 10rpx; 
+}

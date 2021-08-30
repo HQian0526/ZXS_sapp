@@ -1,3 +1,105 @@
+<view class="box">
+  <view class="cu-bar bg-white">
+    <view class="action sub-title">
+      <text class="text-xl text-bold text-green">关于我们</text>
+      <text class="bg-green"></text>
+      <!-- last-child选择器-->
+    </view>
+  </view>
+</view>
+
+<view class="cu-chat">
+  <view class="cu-item">
+    <view class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big143004.jpg);"></view>
+    <view class="main">
+      <view class="content shadow">
+        <text>师弟求助呜呜~我想开个小店，赚人生的第一桶金！自己赚生活费！</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-item self">
+    <view class="main">
+      <view class="content bg-green shadow">
+        <text>师姐真腻害鸭！自己动手，丰衣足食！是遇到什么问题了吗？</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big107000.jpg);"></view>
+  </view>
+
+  <view class="cu-item">
+    <view class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big143004.jpg);"></view>
+    <view class="main">
+      <view class="content shadow">
+        <text>我tb、jd、dy都试过了，但是门槛太高了，月底了师姐又囊中羞涩......师弟你看......</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-item self">
+    <view class="main">
+      <view class="content bg-green shadow">
+        <text>害！虽然我也叮当响，但是安利师姐一个小程序——【宅小四】！</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big107000.jpg);"></view>
+  </view>
+
+  <view class="cu-item self">
+    <view class="main">
+      <view class="content bg-green shadow">
+        <text>只服务于在校大学生的二手闲置平台，而且最关键的是0成本0门槛一键即可开店，买卖全程都有保障！</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big107000.jpg);"></view>
+  </view>
+
+  <view class="cu-item self">
+    <view class="main">
+      <view class="content bg-green shadow">
+        <text>真正实现了“开人生的第一家店，赚人生的第一桶金！”</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big107000.jpg);"></view>
+  </view>
+
+  <view class="cu-item">
+    <view class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big143004.jpg);"></view>
+    <view class="main">
+      <view class="content shadow">
+        <text>看你激动的，我现在就去瞧瞧，谢谢你啦师弟</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-item self">
+    <view class="main">
+      <view class="content bg-green shadow">
+        <text>不客气嘿嘿！其实...我喜欢你!能做我女朋友吗？</text>
+      </view>
+    </view>
+    <view class="date "> 22:00</view>
+    <view class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big107000.jpg);"></view>
+  </view>
+
+  <view class="cu-item self">
+    <view class="main">
+      <view class="content bg-green shadow">
+        <text>师姐？</text>
+      </view>
+    </view>
+    <view class="date "> 22:00</view>
+    <view class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big107000.jpg);"></view>
+  </view>
+  <view class="cu-info">
+    <text class="cuIcon-roundclosefill text-red "></text> 对方拒绝了你的消息
+  </view>
+  <view  class="cu-info">
+    对方开启了好友验证，你还不是他(她)的好友。请先发送好友验证请求，对方验证通过后，才能聊天。
+    <text class="text-blue">发送好友验证</text>
+  </view>
+
+</view>
 
 
 

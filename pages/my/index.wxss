@@ -12,6 +12,9 @@ page{
   margin-top: -10rpx;
 }
 
+.cu-modal{
+  border:1rpx dashed
+}
 .shadow{
   width: 100%;
 }

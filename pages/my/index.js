@@ -113,6 +113,14 @@ Page({
     })
   },
 
+  nofunction(){
+    wx.showToast({
+      title: '功能未开放！',
+      icon:'none'
+    })
+    console.log("111111111111111")
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
