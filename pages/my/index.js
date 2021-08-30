@@ -118,7 +118,6 @@ Page({
       title: '功能未开放！',
       icon:'none'
     })
-    console.log("111111111111111")
   },
 
   /**

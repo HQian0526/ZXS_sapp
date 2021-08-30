@@ -1,6 +1,15 @@
+import Toast from '@vant/weapp/toast/toast';
 const app = getApp();
 Page({
   data: {
+    array:[
+      '请选择校区',
+      '广二师——海珠(敬请期待)',
+      '广二师——花都',
+      '华工广州学院'
+    ],
+    position:'请选择校区',    //地区
+    show:false,
     userInfo: {},
     user:{},    //用户信息，存入缓存
     loginCode:'',  //登录随机号
@@ -53,6 +62,13 @@ Page({
       app.loginCodeCallBack=loginCode=>{
         if(loginCode!=""){
           const user = wx.getStorageSync("user");
+          const school = wx.getStorageSync("school");
+          if(!school || ""==school){
+            //用户选择校区
+            this.setData({ show:true })
+          }else{
+            this.setData({position:school})
+          }
           if(!user || user==""){  //无缓存，未登录
             this.setData({ loginStatus:false})
           }else{
@@ -137,6 +153,44 @@ Page({
         console.log("用户未授权")
       }
     })
+  },
+
+  //弹出弹出框
+  showPopup(){
+    this.setData({ show:true })
+  },
+
+  //弹出框关闭
+  onClose(){
+    this.setData({ show:false })
+  },
+
+  //关闭选择器
+  onCancel(event){
+    const { picker, value, index } = event.detail;
+    if(index==0){
+      wx.showToast({
+        title: '因未选择校区，首页所展示的数据为模拟数据，望悉知',
+        icon:'none'
+      })
+    }
+    this.setData({ show:false})
+  },
+
+  //选择器确认
+  onConfirm(event){
+    const { picker, value, index } = event.detail;
+    wx.setStorageSync("school",value);
+    this.setData({
+      position:value,
+      show:false
+    })
+    if(index==0){
+      wx.showToast({
+        title: '因未选择校区，首页所展示的数据为模拟数据，望悉知',
+        icon:'none'
+      })
+    }
   },
 
   // 商品导航栏--

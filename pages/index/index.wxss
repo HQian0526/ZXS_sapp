@@ -40,6 +40,7 @@
 }
 .VerticalBox{
   display: flex;
+  margin-top: -15rpx;
 }
 .VerticalMain{
   background-color: #f1f1f1;
@@ -49,4 +50,12 @@
   transform: scale(calc(0.5 + var(--index) / 10));
   margin-left: calc(var(--left) * 100rpx - 150rpx);
   z-index: var(--index);
+}
+
+.toptitle{
+  color: #aaaaaa;
+}
+
+.card-swiper{
+  margin-top: -30rpx;
 }
