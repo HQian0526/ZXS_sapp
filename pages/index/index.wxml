@@ -1,5 +1,5 @@
 <van-popup show="{{ show }}" position="bottom"  custom-style="height: 35%;" bind:close="onClose" round>
-  <van-picker show-toolbar columns="{{ array }}" default-index="{{ 0 }}" bind:change="onChange" title="根据地区展示相应信息" toolbar-class="toptitle" bind:cancel="onCancel" bind:confirm="onConfirm"/>
+  <van-picker show-toolbar columns="{{ array }}" default-index="{{ 0 }}" title="根据地区展示相应信息" toolbar-class="toptitle" bind:cancel="onCancel" bind:confirm="onConfirm"/>
 </van-popup>
 
 <van-cell title="{{position}}" is-link bind:click="showPopup" custom-style="color:#aaaaaa"/>
@@ -26,27 +26,25 @@
   <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 10rpx)" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
     <view class="padding-top padding-lr" wx:for="{{list}}" wx:key="key" id="main-{{index}}">
       <view class='cu-bar solid-bottom bg-white'>
-        <view class='action'>
-          <text class='cuIcon-title text-green'></text> {{item.name}} </view>
+        <view class='action'><text class='cuIcon-title text-green'></text> {{item.name}} </view>
       </view>
       <view class="cu-list menu-avatar">
         
-        <view class="cu-item " wx:for="{{5}}" wx:key="key">
-          <view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
+        <view class="cu-item " wx:for="{{item.products}}" wx:key="key">
+          <view class="cu-avatar radius lg" style="background-image:url({{item.imgUrl}});"></view>
           <view class="content">
             <view class="text-pink">
-              <text class="text-cut">莫甘娜</text>
+              <text class="text-cut">{{item.productName}}</text>
             </view>
             <view class="text-gray text-sm flex">
-              <text class="text-cut">凯尔，你被自己的光芒变的盲目！</text>
+              <text class="text-cut">{{item.productIntroduce}}</text>
             </view>
           </view>
           <view class="action">
-            <view class="text-grey text-xs">22:20</view>
-            <view class="cu-tag round bg-red sm">5</view>
+            <view class="text-grey text-xs">{{item.isPost}}</view>
+            <view class="cu-tag round bg-red sm">￥{{item.price}}</view>
           </view>
         </view>
-           
             
       </view>
 
