@@ -136,6 +136,10 @@ Page({
         for(var a = 1;a<that.data.list.length;a++){
           for(var i = 0; i<res.data.length;i++){
             if(that.data.list[a].name == res.data[i].productType){
+              switch(res.data[i].isPost){
+                case 0: res.data[i].isPost = "包配送";break;
+                case 1: res.data[i].isPost = "";break;
+              }
               that.data.list[a].products.push(res.data[i])
             }
           }
